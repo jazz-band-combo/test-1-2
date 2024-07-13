@@ -1,0 +1,93 @@
+body {
+  font-family:"Georgia", Times, serif;
+  padding: 10px;
+  background: #F5F5DC ;
+}
+
+/* begin bar*/
+.topnav {
+  overflow: hidden;
+  background-color: #A2A98B;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ADD8E6;
+  color: black;
+}
+
+/*einde bar*/
+
+/* header */
+.header {
+  padding: 28px;
+  text-align: center;
+  background: white;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+/* einde header */
+/* Gallerij */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+  gap: 10px;
+}
+
+.gallery-item {
+  flex: 1 0 30%; /* Flex basis 30% om 3 items naast elkaar te krijgen */
+  max-width: 30%; /* Max breedte van 30% */
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px;
+  object-fit: fill;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+/* Media query voor tablets en kleinere schermen */
+@media (max-width: 1024px) {
+  .gallery-item {
+    flex: 1 0 45%; /* Flex basis 45% om 2 items naast elkaar te krijgen */
+    max-width: 45%; /* Max breedte van 45% */
+  }
+}
+
+/* Media query voor kleinere schermen zoals de iPhone */
+@media (max-width: 600px) {
+  .gallery {
+    flex-direction: column; /* Items verticaal stapelen */
+    align-items: center; /* Items centreren */
+  }
+
+  .gallery-item {
+    flex: 1 0 100%; /* Flex basis 100% voor volledige breedte */
+    object-fit: fill;
+    max-width: 100%; /* Max breedte 100% */
+    margin: 10px 0;
+    
+  }
+}
